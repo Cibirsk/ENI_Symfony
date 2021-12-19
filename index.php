@@ -11,8 +11,15 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-$maVar = 'test de variable';
-echo $maVar;
+$monInventaire = ["nom"=>"imprimante","quantité"=>10,"prix"=>200,"rupture"=>true];
+
+foreach($monInventaire as $key => $valeur){
+    if($key == "rupture" and $valeur == true){
+        echo "rupture de stock";
+    }else{
+        echo $key . ' : ' . $valeur . "<br>" ;
+    }
+}
 
 ?>
 </body>
