@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    
+   
+<h1>Ma page Symfony</h1>
+<?php
+
+$maVar = 'test de variable';
+echo $maVar;
+
+?>
 </body>
 </html>
