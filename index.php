@@ -11,6 +11,7 @@
 <h1>Ma page Symfony</h1>
 <?php
 
+/*
 $monInventaire = ["nom"=>"imprimante","quantité"=>10,"prix"=>200,"rupture"=>true];
 
 foreach($monInventaire as $key => $valeur){
@@ -20,7 +21,16 @@ foreach($monInventaire as $key => $valeur){
         echo $key . ' : ' . $valeur . "<br>" ;
     }
 }
-
+*/
+$produit=["nom"=>"imprimantes", "quantité"=>10, "prix"=>300,  
+"rupture"=>true]; 
+ 
+foreach($produit as $key=>$valeur) { 
+ 
+    echo ($key=="rupture")?($valeur)?"Rupture de stock":"": 
+    $key.": ".$valeur."<br>"; 
+ 
+} 
 ?>
 </body>
 </html>
