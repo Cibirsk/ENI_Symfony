@@ -11,26 +11,16 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-/*
-$monInventaire = ["nom"=>"imprimante","quantité"=>10,"prix"=>200,"rupture"=>true];
+$ordinateur = ["marque"=>"apple","quantité"=>"12","prix"=>1200];
 
-foreach($monInventaire as $key => $valeur){
-    if($key == "rupture" and $valeur == true){
-        echo "rupture de stock";
-    }else{
-        echo $key . ' : ' . $valeur . "<br>" ;
+function affiche_produit($produit){
+    foreach($produit as $key=>$valeur){
+        echo $key . " : " . $valeur . "<br>";
     }
 }
-*/
-$produit=["nom"=>"imprimantes", "quantité"=>10, "prix"=>300,  
-"rupture"=>true]; 
- 
-foreach($produit as $key=>$valeur) { 
- 
-    echo ($key=="rupture")?($valeur)?"Rupture de stock":"": 
-    $key.": ".$valeur."<br>"; 
- 
-} 
+
+affiche_produit($ordinateur);
+
 ?>
 </body>
 </html>
