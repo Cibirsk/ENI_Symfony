@@ -23,9 +23,36 @@ function affiche_produit($produit){
 //echo affiche_produit($ordinateur);
 
 class Produit{
+    public $nom = "mon produit";
+    public $quantite = 10;
+    public $prix = 120;
+    public $rupture = false;
 
+    function afficherProduit(){
+        return "affichage du produit";
+    }
+    function ajouterProduit(){
+        return "un nouveau produit a été ajouté";
+    }
+    function supprimerProduit(){
+        return "un produit a été supprimé";
+    }
 }
 
+$imprimante = new Produit;
+$imprimante->nom = "imprimante";
+$imprimante->prix = 700;
+$imprimante->quantite = 20;
+$imprimante->rupture = false;
+
+echo "nom du produit: " . $imprimante->nom . "<br>";
+echo "quantité: " . $imprimante->quantite . "<br>";
+echo "prix: " . $imprimante->prix . "<br>";
+echo ($imprimante->rupture)? "rupture de stock<br>":"en stock<br>";
+
+echo $imprimante->afficherProduit() . "<br>";
+echo $imprimante->ajouterProduit() . "<br>";
+echo $imprimante->supprimerProduit() . "<br>";
 
 ?>
 </body>
