@@ -14,12 +14,18 @@
 $ordinateur = ["marque"=>"apple","quantité"=>"12","prix"=>1200];
 
 function affiche_produit($produit){
+    $retour = "";
     foreach($produit as $key=>$valeur){
-        echo $key . " : " . $valeur . "<br>";
+        $retour .= $key . " : " . $valeur . "<br>";
     }
+    return $retour;
+}
+//echo affiche_produit($ordinateur);
+
+class Produit{
+
 }
 
-affiche_produit($ordinateur);
 
 ?>
 </body>
