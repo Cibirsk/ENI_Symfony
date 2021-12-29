@@ -38,9 +38,6 @@ class Produit{
     function supprimerProduit(){
         return "un produit a été supprimé";
     }
-    function ajouterPanier($total){
-        return "vous avez " . $total . " dans votre panier";
-    }
 }
 
 $imprimante = new Produit;
@@ -59,8 +56,6 @@ echo $imprimante->afficherProduit() . "<br>";
 echo $imprimante->ajouterProduit() . "<br>";
 echo $imprimante->supprimerProduit() . "<br>";
 echo "niveau de qualité: " . $imprimante->quality . "<br>";
-echo $imprimante->ajouterPanier(22) . "<br>";
-
 ?>
 </body>
 </html>
