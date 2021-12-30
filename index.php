@@ -17,7 +17,7 @@ class Produit{
     public $prix = 120;
     public $rupture = false;
 
-    function afficherProduit(){
+    function __toString(){
         return "nom: " . $this->nom . "<br>".
                 "quantité :" . $this->quantite . "<br>". 
                 "prix: " . $this->prix . "<br>". 
@@ -50,16 +50,16 @@ $imprimante->quantite = 20;
 $imprimante->rupture = false;
 
 
-echo $imprimante->afficherProduit() . "<br>";
+echo $imprimante . "<br>";
 
 echo $imprimante->supprimerProduit(5) . "<br>";
-echo $imprimante->afficherProduit() . "<br>";
+echo $imprimante . "<br>";
 
 echo $imprimante->supprimerProduit(5) . "<br>";
-echo $imprimante->afficherProduit() . "<br>";
+echo $imprimante . "<br>";
 
 echo $imprimante->ajouterProduit(2) . "<br>";
-echo $imprimante->afficherProduit() . "<br>";
+echo $imprimante . "<br>";
 
 
 ?>
