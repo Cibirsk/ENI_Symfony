@@ -11,51 +11,57 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-$ordinateur = ["marque"=>"apple","quantité"=>"12","prix"=>1200];
-
-function affiche_produit($produit){
-    $retour = "";
-    foreach($produit as $key=>$valeur){
-        $retour .= $key . " : " . $valeur . "<br>";
-    }
-    return $retour;
-}
-//echo affiche_produit($ordinateur);
-
 class Produit{
     public $nom = "mon produit";
     public $quantite = 10;
     public $prix = 120;
     public $rupture = false;
-    public $quality = "";
 
     function afficherProduit(){
-        return "affichage du produit";
+        return "nom: " . $this->nom . "<br>".
+                "quantité :" . $this->quantite . "<br>". 
+                "prix: " . $this->prix . "<br>". 
+                (($this->rupture)? "rupture de stock <br>" : "en stock <br>");
     }
-    function ajouterProduit(){
-        return "un nouveau produit a été ajouté";
+
+    function ajouterProduit($quantite){
+        $this->quantite+=$quantite;
+        if($this->quantite >=0){
+            $this->rupture = false;
+        }
+        return "un nouveau produit a été ajouté <br>" . 
+                "il en reste " . $this->quantite . " en stock <br>";
     }
-    function supprimerProduit(){
-        return "un produit a été supprimé";
+
+    function supprimerProduit($quantite){
+        $this->quantite-=$quantite;
+        if($this->quantite <=0){
+            $this->rupture = true;
+        }
+        return "un produit a été supprimé <br>" . 
+                "il en reste " . $this->quantite . " en stock <br>";
     }
 }
 
 $imprimante = new Produit;
 $imprimante->nom = "imprimante";
-$imprimante->prix = 700;
+$imprimante->prix = 800;
 $imprimante->quantite = 20;
 $imprimante->rupture = false;
-$imprimante->quality = "bonne";
 
-echo "nom du produit: " . $imprimante->nom . "<br>";
-echo "quantité: " . $imprimante->quantite . "<br>";
-echo "prix: " . $imprimante->prix . "<br>";
-echo ($imprimante->rupture)? "rupture de stock<br>":"en stock<br>";
 
 echo $imprimante->afficherProduit() . "<br>";
-echo $imprimante->ajouterProduit() . "<br>";
-echo $imprimante->supprimerProduit() . "<br>";
-echo "niveau de qualité: " . $imprimante->quality . "<br>";
+
+echo $imprimante->supprimerProduit(5) . "<br>";
+echo $imprimante->afficherProduit() . "<br>";
+
+echo $imprimante->supprimerProduit(5) . "<br>";
+echo $imprimante->afficherProduit() . "<br>";
+
+echo $imprimante->ajouterProduit(2) . "<br>";
+echo $imprimante->afficherProduit() . "<br>";
+
+
 ?>
 </body>
 </html>
