@@ -17,6 +17,14 @@ class Produit{
     public $prix = 120;
     public $rupture = false;
 
+    function __construct($nom,$quantite,$prix,$rupture)
+    {
+       $this->nom=$nom; 
+       $this->quantite=$quantite;
+       $this->prix=$prix;
+       $this->$rupture=$rupture;
+    }
+
     function __toString(){
         return "nom: " . $this->nom . "<br>".
                 "quantité :" . $this->quantite . "<br>". 
@@ -43,11 +51,7 @@ class Produit{
     }
 }
 
-$imprimante = new Produit;
-$imprimante->nom = "imprimante";
-$imprimante->prix = 800;
-$imprimante->quantite = 20;
-$imprimante->rupture = false;
+$imprimante = new Produit("ordinateur",10,1200,false);
 
 
 echo $imprimante . "<br>";
@@ -60,7 +64,6 @@ echo $imprimante . "<br>";
 
 echo $imprimante->ajouterProduit(2) . "<br>";
 echo $imprimante . "<br>";
-
 
 ?>
 </body>
