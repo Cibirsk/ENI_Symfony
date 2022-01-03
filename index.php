@@ -14,19 +14,19 @@
 use MesProduits\Produit;
 include "Produit.php";
 
-$imprimante = new Produit("ordinateur",10,1200,false);
+$ordinateur = new Produit("ordinateur",10,1200,false);
 
 
-echo $imprimante . "<br>";
+echo $ordinateur . "<br>";
 
-echo $imprimante->supprimerProduit(5) . "<br>";
-echo $imprimante . "<br>";
+echo $ordinateur->supprimerProduit(5) . "<br>";
+echo $ordinateur . "<br>";
 
-echo $imprimante->supprimerProduit(5) . "<br>";
-echo $imprimante . "<br>";
+echo $ordinateur->supprimerProduit(5) . "<br>";
+echo $ordinateur . "<br>";
 
-echo $imprimante->ajouterProduit(2) . "<br>";
-echo $imprimante . "<br>";
+echo $ordinateur->ajouterProduit(2) . "<br>";
+echo $ordinateur . "<br>";
 
 ?>
 </body>
