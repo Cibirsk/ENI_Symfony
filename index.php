@@ -11,7 +11,7 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-use MesProduits\Produit;
+use MesProduits\Produit;  // use + namespace + class
 include "MesProduits/Produit.php";
 
 $ordinateur = new Produit("ordinateur",10,1200,false);
