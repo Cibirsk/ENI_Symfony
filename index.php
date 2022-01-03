@@ -11,21 +11,34 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-/*
-use MesProduits\Produit;  // use + namespace + class
+// OK //
 include "MesProduits/Produit.php";
+
+// OK //
+/* 
+function monAutoLoad() {
+    include "MesProduits/Produit.php";
+} 
+spl_autoload_register('monAutoload'); 
 */
 
+// ECHEC //
+/*
+spl_autoload_register(function ($class) {
+    include 'MesProduits/' . $class . '.php';
+});
+*/
 
-use MesProduits\Produit;
-
+// ECHEC //
+/*
 function monAutoLoad($class) { 
     include  "MesProduits/" . $class . ".php"; 
 } 
- 
-spl_autoload_register("monAutoload"); 
- 
+spl_autoload_register('monAutoload');
+*/
 
+
+use MesProduits\Produit; // nameSpace\class
 
 $ordinateur = new Produit("ordinateur",10,1200,false);
 
