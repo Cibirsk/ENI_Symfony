@@ -12,7 +12,7 @@
 <?php
 
 use MesProduits\Produit;
-include "Produit.php";
+include "MesProduits/Produit.php";
 
 $ordinateur = new Produit("ordinateur",10,1200,false);
 
