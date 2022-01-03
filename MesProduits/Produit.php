@@ -1,5 +1,5 @@
 <?php
-namespace MesProduits;
+namespace MesProduits; //donner le même nom que le dossier parent
 
 class Produit{
     public $nom = "mon produit";

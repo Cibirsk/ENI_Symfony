@@ -11,8 +11,21 @@
 <h1>Ma page Symfony</h1>
 <?php
 
+/*
 use MesProduits\Produit;  // use + namespace + class
 include "MesProduits/Produit.php";
+*/
+
+
+use MesProduits\Produit;
+
+function monAutoLoad($class) { 
+    include  "MesProduits/" . $class . ".php"; 
+} 
+ 
+spl_autoload_register("monAutoload"); 
+ 
+
 
 $ordinateur = new Produit("ordinateur",10,1200,false);
 
