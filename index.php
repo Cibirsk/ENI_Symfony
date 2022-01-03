@@ -11,7 +11,7 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-use Mes_Produits\Produit;
+use MesProduits\Produit;
 include "Produit.php";
 
 $imprimante = new Produit("ordinateur",10,1200,false);

@@ -1,5 +1,5 @@
 <?php
-namespace Mes_Produits;
+namespace MesProduits;
 
 class Produit{
     public $nom = "mon produit";
