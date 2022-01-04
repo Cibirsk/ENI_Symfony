@@ -15,33 +15,26 @@
 //include "MesProduits/Produit.php";
 
 // OK //
-/* 
+ 
 function monAutoLoad() {
     include "MesProduits/Produit.php";
 } 
 spl_autoload_register('monAutoload'); 
-*/
+
 
 // ECHEC //
 /*
-spl_autoload_register(function ($class) {
-    include 'MesProduits/' . $class . '.php';
-});
-*/
-
-// ECHEC //
-
 function monAutoLoad($class) { 
     include  "MesProduits/" . $class . ".php"; 
 } 
+
 spl_autoload_register('monAutoload');
-
-
+*/
 
 use MesProduits\Produit; // nameSpace\class
 
-$ordinateur = new Produit("ordinateur",10,1200,false);
 
+$ordinateur = new Produit("ordinateur",10,1200,false);
 
 echo $ordinateur . "<br>";
 
