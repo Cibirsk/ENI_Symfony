@@ -12,7 +12,7 @@
 <?php
 
 // OK //
-include "MesProduits/Produit.php";
+//include "MesProduits/Produit.php";
 
 // OK //
 /* 
@@ -30,12 +30,12 @@ spl_autoload_register(function ($class) {
 */
 
 // ECHEC //
-/*
+
 function monAutoLoad($class) { 
     include  "MesProduits/" . $class . ".php"; 
 } 
 spl_autoload_register('monAutoload');
-*/
+
 
 
 use MesProduits\Produit; // nameSpace\class
