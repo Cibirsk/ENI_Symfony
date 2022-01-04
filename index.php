@@ -11,25 +11,13 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-// OK //
 //include "MesProduits/Produit.php";
 
-// OK //
- 
-function monAutoLoad() {
+function monAutoLoad(){
     include "MesProduits/Produit.php";
 } 
 spl_autoload_register('monAutoload'); 
 
-
-// ECHEC //
-/*
-function monAutoLoad($class) { 
-    include  "MesProduits/" . $class . ".php"; 
-} 
-
-spl_autoload_register('monAutoload');
-*/
 
 use MesProduits\Produit; // nameSpace\class
 
