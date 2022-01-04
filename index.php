@@ -11,9 +11,7 @@
 <h1>Ma page Symfony</h1>
 <?php
 
-error_log('Chargement de la page');
 function monAutoLoad($class) {
-    error_log($class);
     include(str_replace("\\", "/", $class). ".php");
 }
 
@@ -22,7 +20,6 @@ spl_autoload_register('monAutoLoad');
 use MesProduits\Produit;
 
 $ordinateur = new Produit("ordinateur",10,1200,false);
-error_log('instantiation');
 
 echo $ordinateur . "<br>";
 
