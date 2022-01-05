@@ -25,7 +25,7 @@ echo $ordinateur->supprimerProduit(5) . "<br>";
 use MesProduits\ProduitParLots; 
 $cartouchesEncre=new ProduitParLots("Cartouches d'encre",1,50,false); 
 $cartouchesEncre->setNbArticlesParLot(10); 
-echo $cartouchesEncre;
+echo $cartouchesEncre . "<br>";
 
 ?>
 </body>

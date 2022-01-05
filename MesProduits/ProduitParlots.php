@@ -10,7 +10,7 @@ class ProduitParLots extends Produit{
 
     function setNbArticlesParLot($valeur){
         if(!is_integer($valeur)){
-            echo "la propriété nbArticlesParLot doit être un entier";
+            echo "la propriété nombre d'ArticlesParLot doit être un entier <br>";
         }else{
             $this->nbArticlesParLot=$valeur;
         }

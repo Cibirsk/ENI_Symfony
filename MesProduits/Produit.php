@@ -8,7 +8,7 @@ class Produit{
     public $prix = 120;
     public $rupture = false;
 
-    function __construct($nom,$quantite,$prix,$rupture)
+    function __construct($nom,$quantite,$prix,$rupture) //construit l'objet avec les valeurs
     {
        $this->nom=$nom; 
        $this->quantite=$quantite;
@@ -16,7 +16,7 @@ class Produit{
        $this->$rupture=$rupture;
     }
 
-    function __toString(){
+    function __toString(){ //convertit l'objet en string pour permettre l'affichage
         return "nom: " . $this->nom . "<br>".
                 "quantité: " . $this->quantite . "<br>". 
                 "prix: " . $this->prix . "<br>". 
