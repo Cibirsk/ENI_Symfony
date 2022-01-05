@@ -14,6 +14,7 @@
 function monAutoLoad($class) {
     include(str_replace("\\", "/", $class). ".php");
 }
+
 spl_autoload_register('monAutoLoad');
 
 use MesProduits\Produit;
