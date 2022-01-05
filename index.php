@@ -18,19 +18,14 @@ function monAutoLoad($class) {
 spl_autoload_register('monAutoLoad');
 
 use MesProduits\Produit;
-
 $ordinateur = new Produit("ordinateur",10,1200,false);
-
 echo $ordinateur . "<br>";
-
 echo $ordinateur->supprimerProduit(5) . "<br>";
-echo $ordinateur . "<br>";
 
-echo $ordinateur->supprimerProduit(5) . "<br>";
-echo $ordinateur . "<br>";
-
-echo $ordinateur->ajouterProduit(2) . "<br>";
-echo $ordinateur . "<br>";
+use MesProduits\ProduitParLots; 
+$cartouchesEncre=new ProduitParLots("Cartouches d'encre",1,50,false); 
+$cartouchesEncre->setNbArticlesParLot(10); 
+echo $cartouchesEncre;
 
 ?>
 </body>
