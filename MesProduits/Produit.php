@@ -8,7 +8,7 @@ class Produit{
     protected $prix = 120;
     protected $rupture = false;
 
-    function __construct($nom,$quantite,$prix,$rupture) //construit l'objet avec les valeurs
+    function __construct(string $nom,int $quantite,float $prix,bool $rupture) //construit l'objet avec les valeurs
     {
        $this->nom=$nom; 
        $this->quantite=$quantite;
