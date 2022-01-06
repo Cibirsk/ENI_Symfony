@@ -8,7 +8,7 @@
 </head>
 <body>
    
-<h1>Ma page Symfony</h1>
+<h1>Learn Symfony</h1>
 <?php
 
 function monAutoLoad($class) {
@@ -23,8 +23,9 @@ echo $ordinateur . "<br>";
 echo $ordinateur->supprimerProduit(5) . "<br>";
 
 use MesProduits\ProduitParLots; 
-$cartouchesEncre=new ProduitParLots("Cartouches d'encre",1,50,false); 
+$cartouchesEncre=new ProduitParLots("Cartouches d'encre",3,50,false); 
 $cartouchesEncre->setNbArticlesParLot(10); 
+$cartouchesEncre->ajouterProduit(6);
 echo $cartouchesEncre . "<br>";
 
 ?>

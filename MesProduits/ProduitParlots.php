@@ -15,6 +15,11 @@ class ProduitParLots extends Produit{
             $this->nbArticlesParLot=$valeur;
         }
     }
+
+    function ajouterProduit2(){
+        $this->quantite+=$this->nbArticlesParLot; 
+        if($this->quantite>0) $this->rupture=false;
+    }
 }
 
 

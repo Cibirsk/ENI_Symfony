@@ -3,10 +3,10 @@ namespace MesProduits; //donner le même nom que le dossier parent
 
 
 class Produit{
-    public $nom = "mon produit";
-    public $quantite = 10;
-    public $prix = 120;
-    public $rupture = false;
+    protected $nom = "mon produit";
+    protected $quantite = 10;
+    protected $prix = 120;
+    protected $rupture = false;
 
     function __construct($nom,$quantite,$prix,$rupture) //construit l'objet avec les valeurs
     {
